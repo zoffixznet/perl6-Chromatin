@@ -11,13 +11,13 @@ of the distro).
 The core needs to be as lean as possible and should not do much more than
 handle:
 
-    1. Parsing of `chroma.ini` configuration file
-    2. Loading and execution of plugins and plugin bundles specified in
-        `chroma.ini`
-    3. Providing meta data in the `chroma.ini` to the executed plugins
-    4. Provide information on the current
-        [`chroma` execution cycles](#chroma-execution-cycles) to the
-        executed plugins
+1. Parsing of `chroma.ini` configuration file
+2. Loading and execution of plugins and plugin bundles specified in
+    `chroma.ini`
+3. Providing meta data in the `chroma.ini` to the executed plugins
+4. Provide information on the current
+    [`chroma` execution cycles](#chroma-execution-cycles) to the
+    executed plugins
 
 ### Plugins
 
