@@ -11,10 +11,11 @@ of the distro).
 The core needs to be as lean as possible and should not do much more than
 handle:
 
-1. Parsing of `chroma.ini` configuration file
+1. Parsing of [`chroma.ini` configuration file](#configuration-chromaini)
 2. Loading and execution of plugins and plugin bundles specified in
-    `chroma.ini`
-3. Providing meta data in the `chroma.ini` to the executed plugins
+    [`chroma.ini`](#configuration-chromaini)
+3. Providing meta data in the [`chroma.ini`](#configuration-chromaini)
+    to the executed plugins
 4. Provide information on the current
     [`chroma` execution cycles](#chroma-execution-cycles) to the
     executed plugins
@@ -29,7 +30,7 @@ A single plugin can create any number of [commands](#command-plugins) as well
 as perform any number of operations during any
 [`chroma` execution cycle](#chroma-execution-cycles). The latter require
 the inclusion of the plugin's name (without the `Chromatin::Plugin::` prefix)
-in the `chroma.ini` file.
+in the [`chroma.ini` file](#configuration-chromaini).
 
 #### Command Plugins
 
