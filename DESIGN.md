@@ -34,7 +34,7 @@ in the [`chroma.ini` file](#configuration-chromaini).
 
 #### Command Plugins
 
-A command plugin is one that provides a `Chroma::Command::foo` class, where
+A command plugin is one that provides a `Chromatin::Command::foo` class, where
 `foo` is the name of the command. The installation of such a class would make
 `foo` command available to the [`chroma` executable](#execution), like so:
 

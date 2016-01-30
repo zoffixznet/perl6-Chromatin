@@ -1,0 +1,8 @@
+#!/usr/bin/env perl6
+
+use lib <lib ../lib>;
+
+sub MAIN ($command, *@args, *%args) {
+    require ::("Chromatin::Command::$command");
+    say ::("Chromatin::Command::$command").new.run: @args, %args;
+}

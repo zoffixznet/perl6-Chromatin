@@ -1,0 +1,17 @@
+% my %stash = @_;
+{
+    "perl"         : "6.c",
+    "name"         : "<%= %stash<dist-name> %>",
+    "version"      : "<%= %stash<dist-version> %>",
+    "description"  : "<%= %stash<dist-description> %>",
+    "depends"      : [ ],
+    "test-depends" : [ "Test" ],
+    "provides"     : {
+        "Chromatin" : "lib/Chromatin.pm6"
+    },
+    "resources"    : [
+        "templates/README.md"
+    ],
+    "authors"      : [ "Zoffix Znet" ],
+    "source-url"   : "git://github.com/zoffixznet/perl6-Test-Output.git"
+}
