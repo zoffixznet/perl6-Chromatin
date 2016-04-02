@@ -1,5 +1,5 @@
 unit module Chromatin::Util::Template;
-use Template::Mojo;
+use Template::Protone;
 
 my $templates-dir = $*SPEC.catdir: home-dir, <.chromatin templates>;
 
@@ -33,3 +33,20 @@ sub template (Str:D $name --> IO::Path) {
         ~ "directory ($templates-dir) nor in Chromatin's core templates.";
     return $t;
 }
+
+
+
+
+my $templ = Template::Protone.new;
+
+$templ.parse(template => [q|
+Hello <% print "WORLD!"; %>
+
+Oh, did you want variables too?  I can do <% print $data<what>; %> too.
+
+<% for ^3 { %>
+<% print $_ ~ ($_ == 2 ?? '' !! ', '); %>
+<% } %>
+|], :name<example>);
+
+say $templ.render(:name<example>, :data(what => 'that'))
